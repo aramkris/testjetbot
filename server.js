@@ -7,6 +7,7 @@ app.listen(80, function() {
 
 app.get('/*', function(req, res) {
     var jsonResponse = [];
-    jsonResponse.push({ "text": "Hi. " + (Math.random() * 5 + 1).toFixed(0) + " is a lucky number..." });
+    /*jsonResponse.push({ "text": "Hi. " + (Math.random() * 5 + 1).toFixed(0) + " is a lucky number..." });*/
+    jsonResponse.push({"messages": [{"text": "Welcome to our store!"},{"text": "How can I help you?"}]});
     res.send(jsonResponse);
 });
